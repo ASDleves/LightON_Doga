@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+main{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-areas: "h h h"
+                         "a a a"
+                         "as as as"
+                         "s s s"
+                         "f f f";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+header{
+    grid-area: h;
+}
+article{
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+}
+section{
+    grid-area: s;
+}
+footer{
+    grid-area: f;
+}
