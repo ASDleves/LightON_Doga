@@ -1,12 +1,21 @@
+import Lampa from "./Lampa.js";
+import InfoPanel from "./infopanel.js";
 class Jatekter {
-  
+    #lampak
     constructor() {
-      this.#lepes = 0;
+      this.#lampak = 0;
       const szuloElem = $("article");
-      const playerPTag = $(asideElem).find("p").first();
-      const jatekfolyamat = $(asideElem).find("p").last();
+
       for (let index = 0; index < 9; index++) {
-        const elem = new Lampa(index, szuloElem);
+        const lampa = new Lampa(index, szuloElem);
       }
+      const sectionElem = $("section");
+      const infoPanel = new InfoPanel(sectionElem);
+      $(window).on("elemKivalasztas", (event) => {
+        this.#lampak++;
+        infoPanel.updateLampa(this.#lampak);
+      });
     }
 }
+
+export default Jatekter;

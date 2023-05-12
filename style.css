@@ -20,6 +20,10 @@ header{
 }
 article{
     grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    height: 500px;
 }
 aside{
     grid-area: as;
@@ -29,4 +33,8 @@ section{
 }
 footer{
     grid-area: f;
+}
+.Lampa{
+    border-radius: 50%;
+    border-style: solid;
 }
